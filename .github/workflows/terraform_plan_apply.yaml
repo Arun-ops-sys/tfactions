@@ -8,6 +8,7 @@ on:
 jobs:
   terraform_install_plan_apply:
     runs-on: ubuntu-latest
+    environment: DEV
     env: 
       ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
