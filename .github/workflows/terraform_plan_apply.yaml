@@ -42,6 +42,11 @@ jobs:
           terraform -help
           terraform -help plan
 
+      - name: 'Install and validate TFLINT'
+        run: |
+          curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+          tflint --help
+          
       - name: 'Initialize terraform'
         run: terraform init
 
