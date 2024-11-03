@@ -1,0 +1,24 @@
+name: 'Terraform Plan and Apply'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform_install_plan_apply:
+    defaults:
+      run:
+        shell: bash
+        working-directory: .\infrastructure\createrg
+      
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      
+      - name: list files
+        run: |
+          ls -ltrh
+
+
+
