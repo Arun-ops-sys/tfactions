@@ -1,12 +1,11 @@
-name: 'Terraform Plan and Apply'
+
+name: 'Terraform Plan and Destroy'
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  terraform_install_plan_apply:
+  terraform__plan_destroy:
     runs-on: ubuntu-latest
     environment: DEV
     env: 
@@ -55,9 +54,9 @@ jobs:
         run: |
           terraform plan
 
-      - name: 'terraform apply'
+      - name: 'terraform destroy'
         run: |
-          terraform apply -auto-approve
+          terraform destory -auto-approve
             
 
 
