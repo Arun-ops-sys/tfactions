@@ -8,7 +8,7 @@
    resource_group_name ="app-grp"
    virtual_network = {
     name = "vnet1"
-    address_space ="[10.10.10.0/24]"
+    address_space =["10.0.0.0/16"]
    }
 
  }
