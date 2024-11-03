@@ -18,8 +18,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./infrastructure/createrg
-      
+        working-directory: ./infrastructure/createvnet      
     steps:
       - name: checkout
         uses: actions/checkout@v3
